@@ -1,0 +1,40 @@
+.mdp-sidebar-offers {
+  main {
+    ul {
+      list-style:none !important;
+      padding:0;
+      margin:0;
+      li {
+        div {
+          background-color:$mainGreen;
+          padding:10px;
+          width:100%;
+          box-sizing:border-box;
+          opacity:1 !important;
+          margin-bottom:10px;
+          display:flex;
+          flex-flow:row nowrap;
+          justify-content:space-around;
+          img {
+            display:block;
+            width:60px;
+            height:60px;
+            margin:auto;
+          }
+          p {
+            font-family:$fontTitle;
+            color:white;
+            text-transform:uppercase;
+            font-weight:300;
+            font-size:115%;
+            text-align:center;
+            margin:auto;
+          }
+          &.mdp-sidebar-offers-gifts {
+            margin-bottom:0 !important;
+          }
+        }
+      }
+    }
+  }
+}

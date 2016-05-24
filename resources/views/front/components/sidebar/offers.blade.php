@@ -1,8 +1,9 @@
 <section class="mdp-sidebar-offers">
-    <header>
-        <h1>Offres</h1>
-    </header>
     <main>
-
+        <ul>
+            <li><a href=""><div class="mdp-sidebar-offers-fidelity"><img src="{{ asset('img/sidebar/icons/ring.png') }}" alt="avantages fidélité" /><p>Avantages fidélité</p></div></a></li>
+            <li><a href=""><div class="mdp-sidebar-offers-fidelity"><img src="{{ asset('img/sidebar/icons/bubbles.png') }}" alt="parrainage" /><p>Parrainage</p></div></a></li>
+            <li><a href=""><div class="mdp-sidebar-offers-gifts"><img src="{{ asset('img/sidebar/icons/giftbox.png') }}" alt="bons cadeaux" /><p>Bons cadeaux</p></div></a></li>
+        </ul>
     </main>
 </section>

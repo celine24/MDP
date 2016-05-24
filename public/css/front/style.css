@@ -12,7 +12,17 @@ body {
 .mdp-main-container {
   max-width: 1200px;
   margin: auto;
-  padding: 20px 0 180px 0;
+  padding: 40px 10px 180px 10px;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 a {
@@ -85,7 +95,7 @@ a {
 
 .mdp-main-menu ul li {
   list-style: none !important;
-  padding: 0 10px;
+  padding: 0;
 }
 
 .mdp-main-menu ul li a {
@@ -95,6 +105,7 @@ a {
   font-weight: 400;
   font-size: 100%;
   display: block;
+  padding: 0 10px;
 }
 
 #mdp-navbar {
@@ -207,15 +218,12 @@ footer {
   -webkit-flex-flow: column wrap;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: 20%;
 }
 
 .mdp-main-aside section {
   width: 100%;
-  margin: 10px;
+  margin-bottom: 10px;
 }
 
 .mdp-main-aside section header {
@@ -229,14 +237,113 @@ footer {
   color: white;
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 140%;
+  font-size: 115%;
   text-align: center;
 }
 
 .mdp-main-aside section main {
   background: white;
   opacity: 0.9;
-  height: 300px;
+  padding: 15px;
+}
+
+.mdp-sidebar-news main ul {
+  list-style: square !important;
+  padding-left: 15px;
+  margin: 0;
+}
+
+.mdp-main-content {
+  width: 75%;
+  height: 600px;
+  background: white;
+  opacity: 0.9;
+  margin: 0 10px;
+}
+
+.mdp-sidebar-info main p {
+  text-align: center;
+}
+
+.mdp-sidebar-info-address p {
+  margin: 0;
+  font-size: 90%;
+}
+
+.mdp-sidebar-info-map {
+  margin: 10px 0;
+}
+
+.mdp-sidebar-info-phone p {
+  font-size: 90%;
+  margin: 0;
+}
+
+.mdp-sidebar-info-phone p em.mdp-phone-number {
+  font-size: 160%;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #7c9a3a;
+  font-style: normal !important;
+}
+
+.mdp-sidebar-info-text {
+  font-size: 90%;
+}
+
+p.mdp-sidebar-info-pdf {
+  margin-bottom: 0;
+}
+
+p.mdp-sidebar-info-pdf a {
+  color: #2f5530;
+  font-weight: normal;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 120%;
+}
+
+.mdp-sidebar-offers main ul {
+  list-style: none !important;
+  padding: 0;
+  margin: 0;
+}
+
+.mdp-sidebar-offers main ul li div {
+  background-color: #96ba48;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  opacity: 1 !important;
+  margin-bottom: 10px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+.mdp-sidebar-offers main ul li div img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+}
+
+.mdp-sidebar-offers main ul li div p {
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 115%;
+  text-align: center;
+  margin: auto;
+}
+
+.mdp-sidebar-offers main ul li div.mdp-sidebar-offers-gifts {
+  margin-bottom: 0 !important;
 }
 
 /*

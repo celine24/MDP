@@ -1,0 +1,45 @@
+.mdp-sidebar-info {
+  main {
+    p {
+      text-align:center;
+    }
+  }
+}
+
+.mdp-sidebar-info-address {
+  p {
+    margin:0;
+    font-size:90%;
+  }
+}
+
+.mdp-sidebar-info-map {
+  margin:10px 0;
+}
+
+.mdp-sidebar-info-phone {
+  p {
+    font-size:90%;
+    margin:0;
+    em.mdp-phone-number {
+      font-size:160%;
+      font-family:$fontTitle;
+      color:$lightGreen;
+      font-style:normal !important;
+    }
+  }
+}
+
+.mdp-sidebar-info-text {
+  font-size:90%;
+}
+
+p.mdp-sidebar-info-pdf {
+  margin-bottom:0;
+  a {
+    color:$darkGreen;
+    font-weight:normal;
+    font-family:$fontTitle;
+    font-size:120%;
+  }
+}
