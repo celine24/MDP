@@ -1,4 +1,4 @@
-<header>
+<header class="mdp-header-wrapper">
     <div class="mdp-header">
         <div class="mdp-logo">
             <img src="{{ asset('img/logo/logo.png') }}" alt="logo" />

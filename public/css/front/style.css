@@ -3,11 +3,16 @@ body {
   position: relative;
 }
 
-.mdp-main-container {
+.mdp-main-wrapper {
   width: 100%;
-  height: 1000px;
   background-image: url("../../img/background.jpg");
   background-position: center top;
+}
+
+.mdp-main-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0 180px 0;
 }
 
 a {
@@ -19,7 +24,7 @@ a {
 | Components
 |--------------------------------------------------------------------------
 */
-header {
+.mdp-header-wrapper {
   width: 100%;
   height: 100px;
   background-color: #96ba48;
@@ -193,6 +198,45 @@ footer {
 .mdp-footer-fb-icons img {
   width: 60px;
   padding: 10px 20px;
+}
+
+.mdp-main-aside {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20%;
+}
+
+.mdp-main-aside section {
+  width: 100%;
+  margin: 10px;
+}
+
+.mdp-main-aside section header {
+  background-color: #96ba48;
+  padding: 10px 0;
+}
+
+.mdp-main-aside section header h1 {
+  margin: 0 !important;
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 140%;
+  text-align: center;
+}
+
+.mdp-main-aside section main {
+  background: white;
+  opacity: 0.9;
+  height: 300px;
 }
 
 /*

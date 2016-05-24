@@ -9,13 +9,17 @@
 <body>
 @include('front.components.header')
 
-<div class="mdp-main-container">
+<div class="mdp-main-wrapper">
+    <div class="mdp-main-container">
+        <aside class="mdp-main-aside">
+            @include('front.components.sidebar.news')
+            @include('front.components.sidebar.offers')
+            @include('front.components.sidebar.info')
+        </aside>
+        <main class="mdp-main-content">
 
-    <div id="wrapper">
-
-
+        </main>
     </div>
-
 </div>
 
 @include('front.components.footer')
