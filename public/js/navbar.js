@@ -8,7 +8,7 @@ $(function() {
 
     $arrow
         //.width($(".current_page_item").width())
-        .css("left", ($(".current_page_item a").width()/2))
+        .css("left", (($(".current_page_item a").position().left) + ($(".current_page_item a").width()/2)))
         .data("origLeft", $arrow.position().left)
         .data("origWidth", $arrow.width());
 

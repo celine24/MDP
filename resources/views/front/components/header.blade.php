@@ -6,13 +6,13 @@
         <div class="mdp-navbar-container">
             <nav class="mdp-main-menu">
                 <ul id="mdp-navbar">
-                    <li class="current_page_item"><a href="">Accueil</a></li>
-                    <li><a href="">Institut</a></li>
-                    <li><a href="">Prestations</a></li>
-                    <li><a href="">Produits</a></li>
-                    <li><a href="">Offres</a></li>
-                    <li><a href="">Conseils</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li class="{{ Request::is('/') ? 'current_page_item' : '' }}"><a href="{{ URL::to( '/') }}" >Accueil</a></li>
+                    <li class="{{ Request::is('institut') ? 'current_page_item' : '' }}"><a href="{{ URL::to( 'institut') }}">Institut</a></li>
+                    <li class="{{ Request::is('prestations') ? 'current_page_item' : '' }}"><a href="{{ URL::to( 'prestations') }}">Prestations</a></li>
+                    <li class="{{ Request::is('produits') ? 'current_page_item' : '' }}"><a href="{{ URL::to( 'produits') }}">Produits</a></li>
+                    <li class="{{ Request::is('offres') ? 'current_page_item' : '' }}"><a href="{{ URL::to( 'offres') }}">Offres</a></li>
+                    <li class="{{ Request::is('conseils') ? 'current_page_item' : '' }}"><a href="{{ URL::to( 'conseils') }}">Conseils</a></li>
+                    <li class="{{ Request::is('contact') ? 'current_page_item' : '' }}"><a href="{{ URL::to( 'contact') }}">Contact</a></li>
                 </ul>
             </nav>
         </div>

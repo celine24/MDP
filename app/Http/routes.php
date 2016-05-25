@@ -13,7 +13,19 @@
 
 /*routes front*/
 
-Route::get('/', 'front\homeController@index');
+Route::resource('/', 'front\homeController');
+Route::resource('institut', 'front\institutController');
+Route::resource('prestations', 'front\prestationsController');
+Route::resource('produits', 'front\produitsController');
+Route::resource('offres', 'front\offresController');
+Route::resource('conseils', 'front\advicesController');
+Route::resource('contact', 'front\contactController');
+
+
+//Route::get('/', function()
+//{
+//    return View::make('front.template');
+//});
 
 
 /*ROUTES BACK*/

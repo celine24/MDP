@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Ma Douce Parenthèse</title>
+    <title>Ma Douce Parenthèse - @yield('title')</title>
     <link rel="stylesheet" type="text/css" href="{{ asset('bower_components/normalize-css/normalize.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/front/style.css') }}"/>
 </head>
@@ -17,7 +17,7 @@
             @include('front.components.sidebar.info')
         </aside>
         <main class="mdp-main-content">
-
+            @yield('content')
         </main>
     </div>
 </div>
