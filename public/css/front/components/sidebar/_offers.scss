@@ -1,5 +1,7 @@
 .mdp-sidebar-offers {
   main {
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
     ul {
       list-style:none !important;
       padding:0;
@@ -10,11 +12,11 @@
           padding:10px;
           width:100%;
           box-sizing:border-box;
-          opacity:1 !important;
           margin-bottom:10px;
           display:flex;
           flex-flow:row nowrap;
           justify-content:space-around;
+          border-radius:5px;
           img {
             display:block;
             width:60px;

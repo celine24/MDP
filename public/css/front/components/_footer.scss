@@ -36,6 +36,17 @@ footer {
         display:block;
         color:$darkGreen;
       }
+     &.mdp-active-footer {
+       font-style:italic;
+       position:relative;
+       left:10px;
+       display:inline-block;
+       &:before {
+         content:"> ";
+         position:absolute;
+         left:-10px;
+       }
+     }
     }
   }
 

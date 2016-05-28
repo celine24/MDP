@@ -51,6 +51,7 @@
         font-size:100%;
         display:block;
         padding:0 10px;
+        outline:none !important;
       }
     }
 
@@ -59,4 +60,5 @@
 
 #mdp-navbar { margin: 0 auto; list-style: none; position: relative; width: 600px; }
 #mdp-navbar li a:hover { color: white; }
-#mdp-navbar-arrow { position: absolute; bottom: -15px; left: 0; width: 20px; height: 10px; background-image:url("../../img/menu/arrow.png"); background-repeat:no-repeat;}
+#mdp-navbar-arrow { position: absolute; bottom: -15px; left: 0; height: 10px; background-image:url("../../img/menu/arrow.png"); background-repeat:no-repeat;}
+#mdp-hidden { display:none;}
