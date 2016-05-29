@@ -18,7 +18,28 @@ body {
   justify-content:space-between;
 }
 
-
 a {
   text-decoration:none !important;
+}
+
+p.mdp-signature {
+  text-align:right;
+  font-weight:bold;
+  padding-top:20px;
+}
+
+.mdp-bold {
+  font-weight:bold;
+}
+
+.mdp-italic {
+  font-style:italic;
+}
+
+h2 {
+  font-size:140% !important;
+  font-family:$fontTitle;
+  color:$darkGreen;
+  margin:30px 0 0 0;
+  font-weight:normal !important;
 }

@@ -29,6 +29,28 @@ a {
   text-decoration: none !important;
 }
 
+p.mdp-signature {
+  text-align: right;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.mdp-bold {
+  font-weight: bold;
+}
+
+.mdp-italic {
+  font-style: italic;
+}
+
+h2 {
+  font-size: 140% !important;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #2f5530;
+  margin: 30px 0 0 0;
+  font-weight: normal !important;
+}
+
 /*
 |--------------------------------------------------------------------------
 | Components
@@ -261,7 +283,7 @@ footer {
 }
 
 .mdp-main-aside section main {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: white;
   padding: 15px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -271,14 +293,6 @@ footer {
   list-style: square !important;
   padding-left: 15px;
   margin: 0;
-}
-
-.mdp-main-content {
-  width: 75%;
-  height: 600px;
-  background-color: rgba(255, 255, 255, 0.9);
-  margin: 0 10px;
-  border-radius: 5px;
 }
 
 .mdp-sidebar-info main p {
@@ -371,8 +385,101 @@ p.mdp-sidebar-info-pdf a {
   margin-bottom: 0 !important;
 }
 
+.mdp-main-content {
+  width: 75%;
+  background-color: white;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+
+.mdp-main-content header {
+  width: 100%;
+  background-color: #96ba48;
+  padding: 10px 30px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-sizing: border-box;
+}
+
+.mdp-main-content header h1 {
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+  font-size: 120%;
+  text-transform: uppercase;
+  font-weight: 300;
+  width: 100%;
+  border-bottom: 1px solid #c3e984;
+}
+
+.mdp-main-content main {
+  padding: 30px 50px 20px 50px;
+}
+
+.mdp-main-content main p {
+  font-size: 90%;
+}
+
 /*
 |--------------------------------------------------------------------------
-| Layouts
+| Pages
 |--------------------------------------------------------------------------
 */
+.mdp-home-img {
+  width: 80%;
+  border: 1px solid #d2d3d1;
+  display: block;
+  padding: 10px;
+  margin: 50px auto 0;
+}
+
+.mdp-contact address {
+  font-style: normal !important;
+  padding-top: 10px;
+}
+
+.mdp-contact-phone {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.mdp-contact-map iframe {
+  width: 500px;
+  height: 350px;
+}
+
+.mdp-legal-notice-list {
+  list-style: none !important;
+  padding: 0;
+}
+
+.mdp-legal-notice-list li:first-of-type h2 {
+  margin-top: 0;
+}
+
+.mdp-legal-notice-list li p {
+  margin: 10px 0;
+}
+
+.mdp-legal-notice-list li:first-child .mdp-legal-notice-title {
+  margin: 0;
+}
+
+.mdp-partners-list {
+  list-style: none !important;
+  padding: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin: 40px 0 50px 0;
+}
+
+.mdp-partners-list li a img {
+  padding: 10px;
+  border: 1px solid #d2d3d1;
+}

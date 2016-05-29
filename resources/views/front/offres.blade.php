@@ -1,14 +1,11 @@
 @extends('front.layouts.template')
-
-
 @section('title', 'Offres')
-
-{{--@section('sidebar')--}}
-{{--@parent--}}
-
-{{--<p>This is appended to the master sidebar.</p>--}}
-{{--@endsection--}}
-
 @section('content')
-    <p>offres.</p>
+    <section class="mdp-home">
+        <header><h1>Offres spéciales et bons cadeaux</h1></header>
+        <main>
+            <p>
+                soon</p>
+        </main>
+    </section>
 @endsection

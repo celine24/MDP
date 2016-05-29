@@ -11,14 +11,17 @@
 @import "components/_footer";
 @import "components/sidebar/_aside";
 @import "components/sidebar/_news";
-@import "components/main_content/_main";
 @import "components/sidebar/_info";
 @import "components/sidebar/_offers";
+@import "components/main_content/_main";
 
 /*
 |--------------------------------------------------------------------------
-| Layouts
+| Pages
 |--------------------------------------------------------------------------
 */
 
-
+@import "pages/_home";
+@import "pages/_contact";
+@import "pages/_legal-notice";
+@import "pages/_partners";

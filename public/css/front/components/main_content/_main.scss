@@ -1,7 +1,31 @@
 .mdp-main-content{
   width:75%;
-  height:600px;
   background-color:$whiteTransp;
   margin:0 10px;
   border-radius:5px;
+
+  header {
+    width:100%;
+    background-color:$mainGreen;
+    padding:10px 30px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    box-sizing:border-box;
+     h1 {
+       font-family:$fontTitle;
+       color:white;
+       font-size:120%;
+       text-transform:uppercase;
+       font-weight:300;
+       width:100%;
+       border-bottom:1px solid #c3e984;
+     }
+  }
+
+  main {
+    padding:30px 50px 20px 50px;
+    p {
+      font-size:90%;
+    }
+  }
 }

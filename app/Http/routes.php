@@ -20,9 +20,9 @@ Route::resource('produits', 'front\produitsController');
 Route::resource('offres', 'front\offresController');
 Route::resource('conseils', 'front\advicesController');
 Route::resource('contact', 'front\contactController');
-Route::resource('partenaires', 'front\partenairesController');
-Route::resource('mentions-legales', 'front\mentionsLegalesController');
-Route::resource('remerciements', 'front\remerciementsController');
+Route::resource('partenaires', 'front\partnersController');
+Route::resource('mentions-legales', 'front\legalNoticeController');
+Route::resource('remerciements', 'front\thanksController');
 
 //Route::get('/', function()
 //{

@@ -1,14 +1,11 @@
 @extends('front.layouts.template')
-
-
 @section('title', 'Prestations')
-
-{{--@section('sidebar')--}}
-{{--@parent--}}
-
-{{--<p>This is appended to the master sidebar.</p>--}}
-{{--@endsection--}}
-
 @section('content')
-    <p>prestations.</p>
+    <section class="mdp-home">
+        <header><h1>Prestations et Tarifs</h1></header>
+        <main>
+            <p>
+                soon</p>
+        </main>
+    </section>
 @endsection

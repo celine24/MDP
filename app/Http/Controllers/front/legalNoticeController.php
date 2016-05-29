@@ -9,11 +9,11 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
-class MentionsLegalesController extends Controller
+class legalNoticeController extends Controller
 {
     public function index()
     {
-        return view('front\mentions-legales');
+        return view('front\legal-notice');
     }
 
 

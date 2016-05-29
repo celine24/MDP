@@ -1,14 +1,11 @@
 @extends('front.layouts.template')
-
-
 @section('title', 'Institut')
-
-{{--@section('sidebar')--}}
-{{--@parent--}}
-
-{{--<p>This is appended to the master sidebar.</p>--}}
-{{--@endsection--}}
-
 @section('content')
-    <p>institut.</p>
+    <section class="mdp-home">
+        <header><h1>L'institut</h1></header>
+        <main>
+            <p>
+                soon</p>
+        </main>
+    </section>
 @endsection
