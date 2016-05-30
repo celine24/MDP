@@ -1,0 +1,20 @@
+.mdp-products-list {
+  list-style:none !important;
+  padding:0;
+  li {
+    img {
+      border:$imgBorder;
+      display:block;
+      margin:50px auto 5px;
+    }
+    h2 {
+      text-align:center;
+      margin-top:10px;
+    }
+    p {
+      padding:5px 0 !important;
+      margin:0 !important;
+    }
+
+  }
+}

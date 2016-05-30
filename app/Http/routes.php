@@ -14,10 +14,10 @@
 /*routes front*/
 
 Route::resource('/', 'front\homeController');
-Route::resource('institut', 'front\institutController');
+Route::resource('institut', 'front\salonController');
 Route::resource('prestations', 'front\prestationsController');
-Route::resource('produits', 'front\produitsController');
-Route::resource('offres', 'front\offresController');
+Route::resource('produits', 'front\productsController');
+Route::resource('offres', 'front\offersController');
 Route::resource('conseils', 'front\advicesController');
 Route::resource('contact', 'front\contactController');
 Route::resource('partenaires', 'front\partnersController');

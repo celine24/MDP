@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Ma Douce Parenthèse - @yield('title')</title>
     <link rel="stylesheet" type="text/css" href="{{ asset('bower_components/normalize-css/normalize.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('bower_components/bxslider/bx_styles/bx_styles.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/front/style.css') }}"/>
 </head>
 <body>
@@ -26,5 +27,7 @@
 
 <script type="text/javascript" src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/navbar.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bower_components/bxslider/jquery.bxSlider.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/bxslider.js') }}"></script>
 </body>
 </html>

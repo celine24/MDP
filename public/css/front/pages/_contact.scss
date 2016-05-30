@@ -10,6 +10,62 @@
   font-size:120%;
 }
 
+.mdp-contact-form {
+  padding-top:20px;
+  display:flex;
+  justify-content:space-between;
+  flex-flow:row wrap;
+
+  ::-webkit-input-placeholder {
+    color: #222;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+    color: #222;
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+    color: #222;
+  }
+
+  :-ms-input-placeholder {
+    color: #222;
+  }
+
+  input[type="text"], input[type="email"]{
+    width:30%;
+    padding:10px;
+    border-radius:5px;
+    border:1px solid $lightGreen;
+    font-size:90%;
+  }
+  textarea {
+    font-size:90%;
+    padding:10px;
+    margin-top:20px;
+    width:100%;
+    border-radius:5px;
+    border:1px solid $lightGreen;
+  }
+  input[type="submit"]{
+    width:30%;
+    margin:20px auto 0;
+    padding:10px;
+    background-color:$mainGreen;
+    color:white;
+    font-family:$fontTitle;
+    font-size:120%;
+    border: none !important;
+    border-radius:5px;
+    font-weight:300;
+    cursor:pointer;
+
+    &:hover {
+      background-color:$lightGreen;
+    }
+  }
+}
+
 .mdp-contact-map {
   iframe {
     width:500px;

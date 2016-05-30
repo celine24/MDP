@@ -1,0 +1,42 @@
+.mdp-salon-introduction {
+  display:flex;
+  justify-content:space-between;
+  flex-flow:row wrap;
+
+  figure {
+    margin:5px;
+    figcaption {
+      max-width:300px;
+      font-size:80%;
+      font-style:italic;
+      text-align:center;
+    }
+  }
+
+  img {
+    max-width:300px;
+    border:$imgBorder;
+    padding:10px;
+  }
+}
+
+.mdp-salon-introduction-text {
+  max-width:450px;
+  padding:10px 0;
+}
+
+.mdp-salon-interview {
+  text-align:center;
+  max-width:300px;
+  margin:30px auto;
+  p {
+    text-align:center !important;
+    margin:5px 0 0 0;
+  }
+}
+
+.mdp-salon-slidehow {
+  .bx-wrapper {
+    margin:auto;
+  }
+}
