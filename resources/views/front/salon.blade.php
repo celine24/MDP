@@ -29,8 +29,8 @@
             <div class="mdp-salon-slideshow">
                 <ul class="bxslider">
                     <li><img src="{{ asset('img/pages/salon/slideshow/entree.jpg') }}" title="Entrée" /></li>
-                    <li><img src="{{ asset('img/pages/salon/slideshow/entree2.jpg') }}" title="Entrée" /></li>
                     <li><img src="{{ asset('img/pages/salon/slideshow/entree3.jpg') }}" title="Entrée" /></li>
+                    <li><img src="{{ asset('img/pages/salon/slideshow/entree2.jpg') }}" title="Entrée" /></li>
                     <li><img src="{{ asset('img/pages/salon/slideshow/accueil.jpg') }}" title="Accueil" /></li>
                 </ul>
             </div>
