@@ -4,6 +4,14 @@
     <section class="mdp-salon">
         <header><h1>L'institut</h1></header>
         <main>
+            <div class="mdp-salon-slideshow">
+                <ul class="bxslider">
+                    <li><img src="{{ asset('img/pages/salon/slideshow/entree.jpg') }}" title="Entrée" /></li>
+                    <li><img src="{{ asset('img/pages/salon/slideshow/entree3.jpg') }}" title="Entrée" /></li>
+                    <li><img src="{{ asset('img/pages/salon/slideshow/entree2.jpg') }}" title="Entrée" /></li>
+                    <li><img src="{{ asset('img/pages/salon/slideshow/accueil.jpg') }}" title="Accueil" /></li>
+                </ul>
+            </div>
             <div class="mdp-salon-introduction">
                 <figure>
                     <img src="{{ asset('img/pages/salon/pascale.jpg') }}" alt="Pascale Grandchamp" />
@@ -25,15 +33,6 @@
                 </audio>
                 <p class="mdp-italic">Mon interview par Radio Prévert Pontvallain</p>
             </div>
-
-            <div class="mdp-salon-slideshow">
-                <ul class="bxslider">
-                    <li><img src="{{ asset('img/pages/salon/slideshow/entree.jpg') }}" title="Entrée" /></li>
-                    <li><img src="{{ asset('img/pages/salon/slideshow/entree3.jpg') }}" title="Entrée" /></li>
-                    <li><img src="{{ asset('img/pages/salon/slideshow/entree2.jpg') }}" title="Entrée" /></li>
-                    <li><img src="{{ asset('img/pages/salon/slideshow/accueil.jpg') }}" title="Accueil" /></li>
-                </ul>
-            </div>
-            </main>
+        </main>
     </section>
 @endsection

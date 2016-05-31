@@ -5,12 +5,6 @@
   border-radius:5px;
 
   header {
-    width:100%;
-    background-color:$mainGreen;
-    padding:10px 30px;
-    border-top-left-radius:5px;
-    border-top-right-radius:5px;
-    box-sizing:border-box;
      h1 {
        font-family:$fontTitle;
        color:white;
@@ -18,15 +12,27 @@
        text-transform:uppercase;
        font-weight:300;
        width:100%;
-       border-bottom:1px solid #c3e984;
+       border-bottom:1px solid $lightGreen;
      }
   }
 
   main {
-    padding:30px 50px 20px 50px;
     p {
       font-size:80%;
       text-align:justify;
     }
   }
+}
+
+.mdp-main-content > section > header {
+  width:100%;
+  background-color:$mainGreen;
+  padding:10px 30px;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+  box-sizing:border-box;
+}
+
+.mdp-main-content > section > main {
+  padding:30px 50px 20px 50px;
 }
