@@ -1,0 +1,28 @@
+.mdp-offers {
+  h2 {
+    margin-top:0;
+  }
+}
+
+.mdp-offers-advantages, .mdp-offers-gifts {
+    margin:50px 0;
+}
+
+.mdp-h3 {
+  font-size:150%;
+  color:$mediumGreen;
+  font-family:$fontTitle;
+}
+
+.mdp-offers-cards {
+  display:flex;
+  justify-content:space-around;
+  flex-flow:row wrap;
+
+  img {
+     width:49%;
+     padding:10px;
+     border:$imgBorder;
+     box-sizing:border-box;
+  }
+}
