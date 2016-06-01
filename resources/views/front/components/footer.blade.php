@@ -1,5 +1,5 @@
-<footer>
-    <div class="mdp-footer">
+<footer class="mdp-footer">
+    <div class="mdp-footer-container">
         <div class="mdp-footer-menu">
             <ul class="mdp-footer-main-menu">
                 <li class="{{ Request::is('/') ? 'mdp-active-footer' : '' }}"><a href="{{ URL::to( '/') }}">Accueil</a></li>

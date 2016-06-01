@@ -13,7 +13,7 @@ class AdvicesController extends Controller
 {
     public function index()
     {
-        return view('front\conseils');
+        return view('front\advices');
     }
 
 

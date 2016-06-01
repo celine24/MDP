@@ -165,7 +165,7 @@ ul li {
   display: none;
 }
 
-footer {
+.mdp-footer {
   width: 100%;
   height: 140px;
   background-color: #96ba48;
@@ -177,7 +177,7 @@ footer {
   font-size: 90%;
 }
 
-.mdp-footer {
+.mdp-footer-container {
   max-width: 1200px;
   margin: 0 auto;
   display: -webkit-flex;
@@ -718,4 +718,26 @@ p.mdp-sidebar-info-pdf a {
 .mdp-provisions-tab-note {
   font-size: 85%;
   padding: 10px 0;
+}
+
+.mdp-advices-article header h2 {
+  text-align: center;
+  margin: 40px 0 30px 0;
+}
+
+.mdp-advices-article:last-child .mdp-advices-separator {
+  display: none;
+}
+
+.mdp-advices-date {
+  text-align: right !important;
+  font-style: italic;
+}
+
+.mdp-advices-separator {
+  width: 100%;
+  height: 100px;
+  background-image: url("../../img/pages/advices/feuille.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
