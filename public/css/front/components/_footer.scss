@@ -1,6 +1,5 @@
 .mdp-footer {
   width:100%;
-  height:140px;
   background-color:$mainGreen;
   padding:10px 0;
   position:absolute;
@@ -70,4 +69,8 @@
     width:60px;
     padding:10px 20px;
   }
+}
+
+.mdp-footer-menu-responsive {
+  display:none;
 }

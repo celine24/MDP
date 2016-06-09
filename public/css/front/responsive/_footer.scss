@@ -1,0 +1,43 @@
+/*petits écrans - de 769px, mobiles et tablettes*/
+@media screen and (max-width: 768px) {
+
+  .mdp-footer-container {
+    flex-flow:wrap-reverse;
+  }
+
+  .mdp-footer-fb {
+    width:100%;
+  }
+
+  .mdp-footer-main-menu {
+    display:none;
+  }
+
+  .mdp-footer-menu {
+    width:100% !important;
+    background-color:$mediumGreen;
+    padding:5px;
+  }
+
+  .mdp-footer-small-menu {
+    width:100% !important;
+
+    li {
+      font-size:130%;
+      font-family:$fontTitle;
+      text-transform:uppercase;
+      font-weight:normal;
+      a {
+        text-align:center;
+        color:white !important;
+        padding:5px 10px;
+        margin:2px 5px;
+        border-radius:5px;
+        &:hover {
+          background-color:$mainGreen;
+          color:white;
+        }
+      }
+    }
+  }
+}

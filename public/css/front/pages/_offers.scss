@@ -5,7 +5,11 @@
 }
 
 .mdp-offers-advantages, .mdp-offers-gifts {
-    margin:50px 0;
+    margin:30px 0;
+}
+
+.mdp-offers-advantages, .mdp-offers-gifts, .mdp-offers-special-offers > main {
+  padding-top:1% !important;
 }
 
 .mdp-h3 {
@@ -19,10 +23,18 @@
   justify-content:space-around;
   flex-flow:row wrap;
 
-  img {
-     width:49%;
-     padding:10px;
-     border:$imgBorder;
-     box-sizing:border-box;
+  figure {
+    width:49%;
+    margin:0;
+
+    img {
+      width:100%;
+      max-width:400px;
+      display:block;
+      margin:1% auto;
+      padding:10px;
+      border:$imgBorder;
+      box-sizing:border-box;
+    }
   }
 }

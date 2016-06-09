@@ -175,7 +175,6 @@ ul li {
 
 .mdp-footer {
   width: 100%;
-  height: 140px;
   background-color: #96ba48;
   padding: 10px 0;
   position: absolute;
@@ -268,6 +267,10 @@ ul li {
   padding: 10px 20px;
 }
 
+.mdp-footer-menu-responsive {
+  display: none;
+}
+
 .mdp-main-aside {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -275,7 +278,7 @@ ul li {
   -webkit-flex-flow: column wrap;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
-  width: 20%;
+  width: 23%;
 }
 
 .mdp-main-aside section {
@@ -362,6 +365,19 @@ p.mdp-sidebar-info-pdf a {
   list-style: none !important;
   padding: 0;
   margin: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mdp-sidebar-offers main ul li {
+  width: 100%;
 }
 
 .mdp-sidebar-offers main ul li div {
@@ -399,14 +415,14 @@ p.mdp-sidebar-info-pdf a {
   margin: auto;
 }
 
-.mdp-sidebar-offers main ul li div.mdp-sidebar-offers-gifts {
+.mdp-sidebar-offers main ul li div.mdp-sidebar-offers-advices {
   margin-bottom: 0 !important;
 }
 
 .mdp-main-content {
   width: 75%;
   background-color: white;
-  margin: 0 10px;
+  margin: 0 0 10px 10px;
   border-radius: 5px;
 }
 
@@ -457,34 +473,43 @@ p.mdp-sidebar-info-pdf a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  box-sizing: border-box;
 }
 
 .mdp-salon-introduction figure {
   margin: 5px;
+  width: 49%;
+  box-sizing: border-box;
+}
+
+.mdp-salon-introduction figure img {
+  width: 100%;
+  border: 1px solid #d2d3d1;
+  padding: 10px;
+  box-sizing: border-box;
+  max-width: 300px;
+  margin: auto;
+  display: block;
 }
 
 .mdp-salon-introduction figure figcaption {
-  max-width: 300px;
   font-size: 80%;
   font-style: italic;
   text-align: center;
-}
-
-.mdp-salon-introduction img {
   max-width: 300px;
-  border: 1px solid #d2d3d1;
-  padding: 10px;
+  margin: auto;
 }
 
 .mdp-salon-introduction-text {
-  max-width: 450px;
-  padding: 10px 0;
+  width: 49%;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .mdp-salon-interview {
@@ -552,6 +577,7 @@ p.mdp-sidebar-info-pdf a {
 }
 
 .mdp-provisions-tab-list li {
+  box-sizing: border-box;
   padding: 5px;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -571,17 +597,20 @@ p.mdp-sidebar-info-pdf a {
 .mdp-provisions-tab-list li div {
   box-sizing: border-box;
   font-size: 90%;
+  box-sizing: border-box;
 }
 
 .mdp-provisions-tab-list li div:last-of-type {
   font-weight: bold;
-  width: 10%;
+  width: 20%;
+  box-sizing: border-box;
   text-align: right;
   padding-right: 5px;
 }
 
 .mdp-provisions-tab-list li div:first-of-type {
-  width: 88%;
+  width: 80%;
+  box-sizing: border-box;
 }
 
 .mdp-provisions-tab-note {
@@ -615,7 +644,11 @@ p.mdp-sidebar-info-pdf a {
 }
 
 .mdp-offers-advantages, .mdp-offers-gifts {
-  margin: 50px 0;
+  margin: 30px 0;
+}
+
+.mdp-offers-advantages, .mdp-offers-gifts, .mdp-offers-special-offers > main {
+  padding-top: 1% !important;
 }
 
 .mdp-h3 {
@@ -636,8 +669,16 @@ p.mdp-sidebar-info-pdf a {
           flex-flow: row wrap;
 }
 
-.mdp-offers-cards img {
+.mdp-offers-cards figure {
   width: 49%;
+  margin: 0;
+}
+
+.mdp-offers-cards figure img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 1% auto;
   padding: 10px;
   border: 1px solid #d2d3d1;
   box-sizing: border-box;
@@ -707,7 +748,7 @@ p.mdp-sidebar-info-pdf a {
 }
 
 .mdp-contact-form input[type="text"], .mdp-contact-form input[type="email"] {
-  width: 30%;
+  width: 29%;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #7c9a3a;
@@ -742,8 +783,9 @@ p.mdp-sidebar-info-pdf a {
 }
 
 .mdp-contact-map iframe {
-  width: 500px;
-  height: 350px;
+  max-width: 500px;
+  height: 300px;
+  width: 100%;
 }
 
 .mdp-legal-notice-list {
@@ -788,12 +830,22 @@ p.mdp-sidebar-info-pdf a {
 | Responsive
 |--------------------------------------------------------------------------
 */
+/*petits écrans de - de 768px, mobiles et tablettes*/
+@media screen and (max-width: 768px) {
+  .mdp-main-container {
+    -webkit-flex-flow: wrap-reverse;
+        -ms-flex-flow: wrap-reverse;
+            flex-flow: wrap-reverse;
+    padding-bottom: 340px;
+  }
+}
+
 .slicknav_menu {
   display: none;
 }
 
-/*petits écrans à partir de 680px, mobiles et tablettes*/
-@media screen and (max-width: 680px) {
+/*petits écrans de - de 768px, mobiles et tablettes*/
+@media screen and (max-width: 768px) {
   /* #menu is the original menu */
   #mdp-navbar {
     display: none;
@@ -857,5 +909,148 @@ p.mdp-sidebar-info-pdf a {
   .mdp-navbar-container {
     align: flex-end;
     width: 100%;
+  }
+}
+
+/*petits écrans - de 769px, mobiles et tablettes*/
+@media screen and (max-width: 768px) {
+  .mdp-footer-container {
+    -webkit-flex-flow: wrap-reverse;
+        -ms-flex-flow: wrap-reverse;
+            flex-flow: wrap-reverse;
+  }
+  .mdp-footer-fb {
+    width: 100%;
+  }
+  .mdp-footer-main-menu {
+    display: none;
+  }
+  .mdp-footer-menu {
+    width: 100% !important;
+    background-color: #7c9a3a;
+    padding: 5px;
+  }
+  .mdp-footer-small-menu {
+    width: 100% !important;
+  }
+  .mdp-footer-small-menu li {
+    font-size: 130%;
+    font-family: "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+  .mdp-footer-small-menu li a {
+    text-align: center;
+    color: white !important;
+    padding: 5px 10px;
+    margin: 2px 5px;
+    border-radius: 5px;
+  }
+  .mdp-footer-small-menu li a:hover {
+    background-color: #96ba48;
+    color: white;
+  }
+}
+
+/*petits écrans de - de 768px, mobiles et tablettes*/
+@media screen and (max-width: 768px) {
+  .mdp-main-aside {
+    width: 100%;
+  }
+  .mdp-sidebar-offers ul li {
+    width: 49% !important;
+  }
+}
+
+/*petits écrans de - de 400px*/
+@media screen and (max-width: 400px) {
+  .mdp-sidebar-offers ul li {
+    width: 100% !important;
+  }
+}
+
+/*petits écrans de - de 400px*/
+@media screen and (max-width: 855px) and (min-width: 769px) {
+  .mdp-main-aside {
+    width: 28%;
+  }
+}
+
+/*petits écrans entre 769 et 980px, tablettes*/
+@media screen and (min-width: 769px) and (max-width: 980px) {
+  .mdp-main-content {
+    margin-right: 0;
+    width: 70%;
+  }
+  .mdp-main-aside {
+    width: 30%;
+  }
+}
+
+/*écrans de + de 769px*/
+@media screen and (min-width: 769px) {
+  .mdp-main-aside {
+    max-width: 240px;
+  }
+}
+
+/*petits écrans de - de 768px, mobiles et tablettes*/
+@media screen and (max-width: 768px) {
+  .mdp-main-content {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+  .mdp-main-content > section > main {
+    padding: 4%;
+  }
+}
+
+/*petits écrans entre 769 et 980px, tablettes*/
+@media screen and (min-width: 769px) and (max-width: 980px) {
+  .mdp-main-content {
+    margin-right: 0;
+    width: 68%;
+  }
+  .mdp-main-content > section > main {
+    padding: 4%;
+  }
+}
+
+/*************PAGE INSTITUT*************/
+/*petits écrans - de 1000px*/
+@media screen and (max-width: 1000px) {
+  .mdp-salon-introduction figure {
+    width: 100%;
+  }
+  .mdp-salon-introduction-text {
+    width: 100%;
+  }
+}
+
+/*************PAGE PRESTATIONS*************/
+/*petits écrans - de 600px*/
+@media screen and (max-width: 600px) {
+  .mdp-provisions-tab-category > main {
+    padding: 1% 0 !important;
+  }
+  .mdp-provisions-tab-category {
+    width: 100%;
+  }
+}
+
+/*************PAGE OFFRES*************/
+/*petits écrans - de 980px*/
+@media screen and (max-width: 980px) {
+  .mdp-offers-cards figure {
+    width: 100%;
+  }
+}
+
+/*************PAGE CONTACT*************/
+/*petits écrans - de 980px*/
+@media screen and (max-width: 980px) {
+  .mdp-contact-form input[type="text"], .mdp-contact-form input[type="email"] {
+    width: 100%;
+    margin: 5px 0;
   }
 }

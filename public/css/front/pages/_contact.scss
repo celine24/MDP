@@ -33,7 +33,7 @@
   }
 
   input[type="text"], input[type="email"]{
-    width:30%;
+    width:29%;
     padding:10px;
     border-radius:5px;
     border:1px solid $mediumGreen;
@@ -68,7 +68,8 @@
 
 .mdp-contact-map {
   iframe {
-    width:500px;
-    height:350px;
+    max-width:500px;
+    height:300px;
+    width:100%;
   }
 }

@@ -1,0 +1,57 @@
+/*************PAGE INSTITUT*************/
+
+/*petits écrans - de 1000px*/
+@media screen and (max-width:1000px) {
+
+  .mdp-salon-introduction {
+    figure {
+      width:100%;
+    }
+  }
+
+  .mdp-salon-introduction-text {
+    width:100%;
+  }
+}
+
+
+/*************PAGE PRESTATIONS*************/
+
+/*petits écrans - de 600px*/
+@media screen and (max-width:600px) {
+
+  .mdp-provisions-tab-category > main {
+    padding:1% 0 !important;
+  }
+  .mdp-provisions-tab-category {
+    width:100%;
+  }
+}
+
+
+/*************PAGE OFFRES*************/
+
+/*petits écrans - de 980px*/
+@media screen and (max-width:980px) {
+
+  .mdp-offers-cards {
+    figure {
+      width: 100%;
+    }
+  }
+
+}
+
+/*************PAGE CONTACT*************/
+
+/*petits écrans - de 980px*/
+@media screen and (max-width:980px) {
+
+  .mdp-contact-form {
+    input[type="text"], input[type="email"] {
+      width:100%;
+      margin:5px 0;
+    }
+  }
+
+}

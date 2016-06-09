@@ -1,28 +1,38 @@
 .mdp-salon-introduction {
   display:flex;
-  justify-content:space-between;
+  justify-content:space-around;
   flex-flow:row wrap;
+  box-sizing:border-box;
 
   figure {
     margin:5px;
-    figcaption {
+    width:49%;
+    box-sizing:border-box;
+    img {
+      width:100%;
+      border:$imgBorder;
+      padding:10px;
+      box-sizing:border-box;
       max-width:300px;
+      margin:auto;
+      display:block;
+    }
+    figcaption {
       font-size:80%;
       font-style:italic;
       text-align:center;
+      max-width:300px;
+      margin:auto;
     }
   }
 
-  img {
-    max-width:300px;
-    border:$imgBorder;
-    padding:10px;
-  }
+
 }
 
 .mdp-salon-introduction-text {
-  max-width:450px;
-  padding:10px 0;
+  width:49%;
+  padding:0 10px;
+  box-sizing:border-box;
 }
 
 .mdp-salon-interview {

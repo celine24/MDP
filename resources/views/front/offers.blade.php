@@ -24,8 +24,12 @@
                     <p><span class="mdp-h3">Carte Fidélité :</span> Gratuite, elle vous donne droit à des remises dès votre 1ere visite à l'institut ! (offre non cumulable avec les promotions en cours)</p>
                     <p><span class="mdp-h3">Parrainage :</span> Pour 3 ami(e)s parrainé(e)s, un soin offert (à choisir parmi plusieurs prestations). Et pour vos filleuls, 10% de remise lors de la 1ère visite. N'hésitez pas, parlez de moi autour de vous. </p>
                     <div class="mdp-offers-cards">
-                        <img src="{{asset('img/pages/offers/fidelite.jpg')}}" title="carte fidélité" alt="carte fidélité" />
-                        <img src="{{asset('img/pages/offers/parrainage.jpg')}}" title="carte parrainage" alt="carte parrainage" />
+                        <figure>
+                            <img src="{{asset('img/pages/offers/fidelite.jpg')}}" title="carte fidélité" alt="carte fidélité" />
+                        </figure>
+                        <figure>
+                            <img src="{{asset('img/pages/offers/parrainage.jpg')}}" title="carte parrainage" alt="carte parrainage" />
+                        </figure>
                     </div>
                 </main>
             </section>

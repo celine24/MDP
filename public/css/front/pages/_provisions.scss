@@ -46,6 +46,7 @@
   margin:0;
 
   li {
+    box-sizing:border-box;
     padding:5px;
     display:flex;
     flex-flow:row wrap;
@@ -58,14 +59,17 @@
     div {
       box-sizing:border-box;
       font-size:90%;
+      box-sizing:border-box;
       &:last-of-type {
         font-weight:bold;
-        width:10%;
+        width:20%;
+        box-sizing:border-box;
         text-align:right;
         padding-right:5px;
       }
       &:first-of-type {
-        width:88%;
+        width:80%;
+        box-sizing:border-box;
       }
     }
   }

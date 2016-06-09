@@ -1,0 +1,7 @@
+/*petits écrans de - de 768px, mobiles et tablettes*/
+@media screen and (max-width: 768px) {
+  .mdp-main-container {
+    flex-flow:wrap-reverse;
+    padding-bottom:340px;
+  }
+}

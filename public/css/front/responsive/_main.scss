@@ -1,0 +1,27 @@
+/*petits écrans de - de 768px, mobiles et tablettes*/
+@media screen and (max-width: 768px) {
+
+  .mdp-main-content {
+    width:100%;
+    margin:0 0 10px 0;
+  }
+
+  .mdp-main-content > section > main {
+    padding:4%;
+  }
+}
+
+/*petits écrans entre 769 et 980px, tablettes*/
+@media screen and (min-width:769px) and (max-width: 980px) {
+
+  .mdp-main-content {
+    margin-right:0;
+    width:68%;
+  }
+
+  .mdp-main-content > section > main {
+    padding:4%;
+  }
+
+}
+

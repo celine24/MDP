@@ -1,0 +1,59 @@
+/*petits écrans de - de 768px, mobiles et tablettes*/
+@media screen and (max-width: 768px) {
+
+  .mdp-main-aside {
+    width:100%;
+  }
+
+  .mdp-sidebar-offers {
+    ul {
+      li {
+        width:49% !important;
+      }
+    }
+  }
+}
+
+/*petits écrans de - de 400px*/
+@media screen and (max-width: 400px) {
+
+  .mdp-sidebar-offers {
+    ul {
+      li {
+        width:100% !important;
+      }
+    }
+  }
+}
+
+
+/*petits écrans de - de 400px*/
+@media screen and (max-width: 855px) and (min-width:769px) {
+
+  .mdp-main-aside {
+    width:28%;
+  }
+}
+
+
+/*petits écrans entre 769 et 980px, tablettes*/
+@media screen and (min-width:769px) and (max-width: 980px) {
+
+  .mdp-main-content {
+    margin-right:0;
+    width:70%;
+  }
+
+  .mdp-main-aside {
+    width:30%;
+  }
+
+}
+
+/*écrans de + de 769px*/
+@media screen and (min-width: 769px) {
+
+  .mdp-main-aside {
+    max-width:240px;
+  }
+}

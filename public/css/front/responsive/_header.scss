@@ -2,9 +2,8 @@
   display:none;
 }
 
-
-/*petits écrans à partir de 680px, mobiles et tablettes*/
-@media screen and (max-width: 680px) {
+/*petits écrans de - de 768px, mobiles et tablettes*/
+@media screen and (max-width: 768px) {
   /* #menu is the original menu */
   #mdp-navbar {
     display:none;
