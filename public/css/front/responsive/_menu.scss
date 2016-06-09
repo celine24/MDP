@@ -1,0 +1,81 @@
+.slicknav_menu {
+  display:none;
+}
+
+
+/*petits écrans à partir de 680px, mobiles et tablettes*/
+@media screen and (max-width: 680px) {
+  /* #menu is the original menu */
+  #mdp-navbar {
+    display:none;
+  }
+
+  .slicknav_btn {
+    background-color:$mediumGreen !important;
+  }
+
+  .slicknav_menutxt {
+    text-shadow:none !important;
+  }
+
+  .slicknav_menu {
+    display:block;
+    background-color:$mediumGreen !important;
+    li {
+      font-size:130%;
+      font-family:$fontTitle;
+      text-transform:uppercase;
+      font-weight:normal;
+      a {
+        text-align:center;
+        color:white;
+        &:hover {
+          background-color:$mainGreen;
+          color:white;
+        }
+      }
+    }
+  }
+
+  .mdp-logo {
+    display:none;
+  }
+
+  .mdp-logo-mobile {
+    display:block;
+    width:100%;
+    img {
+      width:100%;
+      max-width:400px;
+      display:block;
+      margin:auto;
+      padding:5px;
+      box-sizing:border-box;
+    }
+    p {
+      text-align:center;
+      font-family:$fontTitle;
+      text-transform:uppercase;
+      color:white;
+      margin:0 auto;
+      padding:5px;
+    }
+  }
+
+}
+
+/*écrans moyens entre 680px et */
+@media screen and (min-width:680px) and (max-width: 1150px) {
+
+
+  .mdp-logo {
+    align:flex-start;
+    height:150px;
+    margin-left:10px;
+  }
+
+  .mdp-navbar-container {
+    align:flex-end;
+    width:100%;
+  }
+}

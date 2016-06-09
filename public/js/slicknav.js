@@ -1,0 +1,3 @@
+$(function(){
+    $('#mdp-navbar').slicknav();
+});

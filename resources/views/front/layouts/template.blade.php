@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('bower_components/normalize-css/normalize.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('bxslider/jquery.bxslider.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/front/style.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('slicknav/dist/slicknav.min.css') }}"/>
 </head>
 <body>
 @include('front.components.header')
@@ -29,5 +30,7 @@
 <script type="text/javascript" src="{{ asset('js/navbar.js') }}"></script>
 <script type="text/javascript" src="{{ asset('bxslider/jquery.bxslider.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/bxslider.js') }}"></script>
+<script type="text/javascript" src="{{ asset('slicknav/dist/jquery.slicknav.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/slicknav.js') }}"></script>
 </body>
 </html>

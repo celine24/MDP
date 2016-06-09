@@ -1,6 +1,5 @@
 .mdp-header-wrapper {
   width:100%;
-  height:100px;
   background-color:$mainGreen;
   padding:5px 0;
   border-bottom:5px solid white;
@@ -9,7 +8,6 @@
 .mdp-header {
   max-width:1200px;
   width:100%;
-  height:100%;
   margin:auto;
   display:flex;
   justify-content:space-between;
@@ -18,47 +16,56 @@
 
 .mdp-logo {
   width:500px;
+  height:120px;
+  padding:5px;
   img {
     width:100%;
+    margin:auto;
+    display:block;
   }
 }
 
-.mdp-navbar-container {
-  position:relative;
+.mdp-logo-mobile {
+  display:none;
 }
 
-.mdp-main-menu {
-  width:650px;
-  position:absolute;
-  bottom:5px;
-  right:0;
-  ul {
-    margin:0;
-    padding:0;
+  .mdp-navbar-container {
+    position:relative;
+    width:650px;
+  }
+
+  .mdp-main-menu {
+    width:650px;
     position:absolute;
     bottom:5px;
-    display:flex;
-    justify-content:space-between;
-    flex-flow:row wrap;
-    li {
-      list-style:none !important;
+    right:0;
+    ul {
+      margin:0;
       padding:0;
-      a {
-        font-family:$fontTitle;
-        color:#fff;
-        text-transform:uppercase;
-        font-weight:400;
-        font-size:100%;
-        display:block;
-        padding:0 10px;
-        outline:none !important;
+      position:absolute;
+      bottom:5px;
+      display:flex;
+      justify-content:space-between;
+      flex-flow:row wrap;
+      li {
+        list-style:none !important;
+        padding:0;
+        a {
+          font-family:$fontTitle;
+          color:#fff;
+          text-transform:uppercase;
+          font-weight:400;
+          font-size:110%;
+          display:block;
+          padding:0 10px;
+          outline:none !important;
+        }
       }
+
     }
-
   }
-}
 
-#mdp-navbar { margin: 0 auto; list-style: none; position: relative; width: 600px; }
-#mdp-navbar li a:hover { color: white; }
-#mdp-navbar-arrow { position: absolute; bottom: -15px; left: 0; height: 10px; background-image:url("../../img/menu/arrow.png"); background-repeat:no-repeat;}
-#mdp-hidden { display:none;}
+  #mdp-navbar { margin: 0 auto; list-style: none; position: relative; width: 600px; }
+  #mdp-navbar li a:hover { color: white; }
+  #mdp-navbar-arrow { position: absolute; bottom: -15px; left: 0; height: 10px; background-image:url("../../img/menu/arrow.png"); background-repeat:no-repeat;}
+  #mdp-hidden { display:none;}
