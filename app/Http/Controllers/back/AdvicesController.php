@@ -26,7 +26,21 @@ class AdvicesController extends Controller
 
     public function store(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'title' => 'required|unique:posts',
+            'content' => 'required',
+            'published'
+        ]);
 
+        if($validator->fails()) {
+            return redirect(route('admin.conseils.create'))->withErrors($validator);
+        }
+
+        else {
+            $post = Post::create($request->all());
+            $post->save();
+            return redirect(route('admin.conseils.index'))->with('message', 'Félicitations ! Votre article a bien été créé :)');
+        }
     }
 
 

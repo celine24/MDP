@@ -15,7 +15,7 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function(Blueprint $table) {
 
             $table->increments('id');
-            $table->integer('category_id', 100);
+            $table->integer('category_id', false, true); //false = autoincrement ; true = unsigned
             $table->string('title', 100);
             $table->longText('content');
             $table->boolean('published');
