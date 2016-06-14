@@ -5,55 +5,110 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
-                    <div class="panel-heading"><h1>Gestion des Conseils</h1></div>
-
-
-
+                    <div class="panel-heading">
+                        <h1>Gestion des Conseils</h1>
+                    </div>
                     <div class="panel-body">
-                        <p>Bienvenue sur le panneau d'administration de Ma Douce Parenthèse ! Vous pouvez gérer vous-même votre contenu en vous référant à la liste suivante :</p>
-                        <table class="table table-striped">
+                        @if(Session::has('message'))
+                            <p class="alert alert-success">
+                                {{Session::get('message')}}
+                            </p>
+                        @endif
+                        <p class="lead">Ici vous pouvez consulter la liste de vos articles, gérer ces derniers et en créer de nouveaux.</p>
+                        <table class="table table-striped table-bordered table-condensed">
                             <tr>
                                 <th>Titre</th>
                                 <th>Contenu</th>
                                 <th>Statut</th>
                                 <th>Action</th>
                             </tr>
+                            @foreach ($posts as $post)
                             <tr>
-                                <td>1 conseil</td>
-                                <td>1 conseil</td>
-                                <td>1 conseil</td>
-                                <td>
-                                    <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
-                                    <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
-                                    <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-                                    <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                                <td class="col-md-3">{{ str_limit($post->title, $limit = 60, $end = '...') }}</td>
+                                <td class="col-md-4">{{ str_limit($post->content, $limit = 80, $end = '...') }}</td>
+                                <td class="col-md-2">
+                                    @if ($post->published === 1)
+                                        en ligne
+                                    @else
+                                        hors ligne
+                                    @endif
+                                </td>
+                                <td class="col-md-3">
+                                    <div class="mdp-bo-advices-buttons">
+                                        <a href="{{ route('admin.conseils.edit', $post->id) }}" data-toggle="tooltip" title="Editer l'article" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span></a>
+
+                                        <a href="{{ url('conseils') }}" data-toggle="tooltip" title="Prévisualiser l'article" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></a>
+
+                                        {!! Form::open([
+                                            'url' => route('admin.conseils.update', $post->id),
+                                            'method' => 'PUT'
+                                            ])
+                                        !!}
+                                            @if ($post->published === 1)
+                                                <input type="hidden" name="publication" value="0"/>
+                                                <button
+                                                        class="btn btn-warning"
+                                                        type="submit"
+                                                        data-toggle="tooltip"
+                                                        title="Dépublier l'article"
+                                                        data-confirm="delete"
+                                                        data-text="Voulez-vous vraiment dépublier cet article ? Il ne sera plus visible sur le site, mais vous pourrez le remettre en ligne à tout moment."
+                                                        data-confirm-button="Oui"
+                                                        data-cancel-button="Mince, non !"
+                                                        data-placement="top">
+                                                    <span class="glyphicon glyphicon-open"></span>
+                                                </button>
+                                            @else
+                                                <input type="hidden" name="publication" value="1"/>
+                                                <button
+                                                        class="btn btn-success"
+                                                        type="submit"
+                                                        data-toggle="tooltip"
+                                                        title="Mettre en ligne"
+                                                        data-confirm="delete"
+                                                        data-text="Cet article sera visible sur le site si vous le publiez maintenant. Etes-vous certain de vouloir effectuer cette action ?"
+                                                        data-confirm-button="Oui"
+                                                        data-cancel-button="Mince, non !"
+                                                        data-placement="top">
+                                                    <span class="glyphicon glyphicon-save"></span>
+                                                </button>
+                                            @endif
+                                            {!! Form::close() !!}
+
+                                            {!! Form::open([
+                                                        'url' => route('admin.conseils.destroy', $post->id),
+                                                        'method' => 'DELETE'
+                                                        ])
+                                            !!}
+                                            <button
+                                                    class="btn btn-danger"
+                                                    type="submit"
+                                                    data-toggle="tooltip"
+                                                    title="Supprimer l'article"
+                                                    data-confirm="delete"
+                                                    data-text="Voulez-vous vraiment supprimer cet article ? Cette action est définitive."
+                                                    data-confirm-button="Oui"
+                                                    data-cancel-button="Mince, non !"
+                                                    data-placement="top">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </button>
+                                        {!! Form::close() !!}
+                                    </div>
+
+                                    <div class="clearfix"></div>
                                 </td>
                             </tr>
+                            @endforeach
                         </table>
-
-                        <nav>
+                        <a class="btn btn-default pull-right" href="{{ route('admin.conseils.create') }}" role="button">Ecrire un nouveau conseil</a>
+                            <div class="clearfix"></div>
+                        <nav class="mdp-bo-advices-pagination">
                             <ul class="pagination pagination-lg">
-                                <li>
-                                    <a href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li>
-                                    <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
+                                {{ $posts->links() }}
                             </ul>
                         </nav>
-
                     </div>
                 </div>
-                <a class="btn btn-default pull-right" href="{{ route('admin.conseils.create') }}" role="button">Nouveau Conseil</a>
             </div>
         </div>
     </div>

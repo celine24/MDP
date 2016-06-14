@@ -1,0 +1,17 @@
+.checkbox input[type="checkbox"] {
+    position:relative;
+    float:right;
+    margin-left:10px;
+}
+
+.pagination {
+    margin: 0;
+}
+
+.lead {
+    margin:20px 0 30px 0;
+}
+
+.table-condensed > tbody > tr > td, .table-condensed > tbody > tr > th, .table-condensed > tfoot > tr > td, .table-condensed > tfoot > tr > th, .table-condensed > thead > tr > td, .table-condensed > thead > tr > th {
+    padding: 10px 5px;
+}

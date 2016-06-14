@@ -14,7 +14,7 @@ class AdvicesController extends Controller
 {
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::paginate(10);
         return view('back.advices.index', compact('posts'));
     }
 
@@ -46,18 +46,40 @@ class AdvicesController extends Controller
 
     public function edit($id)
     {
-
+        $post = Post::find($id);
+        return view('back.advices.edit', compact('post'));
     }
 
 
     public function update($id, Request $request)
     {
+        $post = Post::findOrFail($id);
 
+        if ($request->has('publication'))
+        {
+            $post->published = $request->get('publication');
+            if ($post->published === "1") {
+                $message = "Votre article est désormais en ligne.";
+            }
+            else {
+                $message = "Votre article est désormais hors ligne.";
+            }
+            $post->update($request->all());
+            return redirect(route('admin.conseils.index'))->with('message', $message);
+        }
+        else
+        {
+            $post->update($request->all());
+            return redirect(route('admin.conseils.index'))->with('message', 'Félicitations ! Votre article vient d\'être édité :)');
+        }
     }
 
 
     public function destroy($id)
     {
+        $post = Post::find($id);
+        $post->delete();
 
+        return redirect(route('admin.conseils.index'))->with('message', 'L\'article "' . $post->title . '" a bien été supprimé.');
     }
 }

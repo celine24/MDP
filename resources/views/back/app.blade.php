@@ -7,6 +7,8 @@
 	<title>Ma Douce Parenthèse - administration</title>
 
 	<link href="{{ asset('bower_components/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/back/bootstrap/bootstrap.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/back/style.css') }}" rel="stylesheet">
 
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>

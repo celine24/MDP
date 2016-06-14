@@ -37,7 +37,7 @@
                                                     null,
                                                     ['class' => 'form-control',
                                                     'maxlength' => '255',
-                                                    'placeholder' => 'Entrez ici le titre de votre article (100 caractères maximun)',
+                                                    'placeholder' => 'Entrez ici le titre de votre article (255 caractères maximun)',
                                                     'required']
                                     )!!}
                                 </div>
@@ -60,8 +60,9 @@
 
                                     <div class="form-group">
                                         <div class="checkbox checkbox-success pull-right">
-                                            {!! Form::label('checkbox1','Mettre en ligne ?') !!}
                                             {!! Form::checkbox('published', '1', false, ['id' => 'checkbox1', 'class' => 'checkbox checkbox-success']) !!}
+
+                                            {!! Form::label('checkbox1','Mettre en ligne ?') !!}
                                         </div>
                                     </div>
                                 </div>
@@ -73,6 +74,7 @@
                                 )!!}
 
                                 {!! Form::close() !!}
+                                <div class="clearfix"></div>
                             </div>
 
                         </div>
