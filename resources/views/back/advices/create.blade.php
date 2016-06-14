@@ -49,7 +49,8 @@
                                     {!! Form::textarea('content',
                                                         null,
                                                         ['class' => 'form-control',
-                                                        'id' => 'ckeditor',
+                                                        'id' => 'ck-editor',
+                                                        'name' => 'ck-editor',
                                                         'placeholder' => 'Entrez le resume ici...',
                                                         'size' => '30x10',
                                                         'required']
