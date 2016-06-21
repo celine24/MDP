@@ -8,12 +8,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
+use App\Post;
 
 class OffersController extends Controller
 {
     public function index()
     {
-        return view('front\offers');
+        $posts = Post::where('category_id', '2')->published()->get();
+        return view('front\offers', compact('posts'));
     }
 
 

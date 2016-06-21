@@ -13,9 +13,10 @@
 }
 
 .mdp-h3 {
-  font-size:150%;
+  font-size:130%;
   color:$mediumGreen;
   font-family:$fontTitle;
+  font-weight:normal !important;
 }
 
 .mdp-offers-cards {
@@ -33,7 +34,6 @@
       display:block;
       margin:1% auto;
       padding:10px;
-      border:$imgBorder;
       box-sizing:border-box;
     }
   }

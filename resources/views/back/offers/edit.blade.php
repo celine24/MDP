@@ -6,7 +6,7 @@
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h1>Éditer le conseil</h1>
+                        <h1>Éditer l'Offre</h1>
                     </div>
                     <div class="panel-body">
 
@@ -21,34 +21,34 @@
                             </div>
                         @endif
 
-                        {!! Form::model($post, ['route' => ['admin.conseils.update', $post->id], 'method' => 'patch', 'id' =>
+                        {!! Form::model($post, ['route' => ['admin.offres.update', $post->id], 'method' => 'patch', 'id' =>
                         'form-main', 'class' => 'center-block']) !!}
 
                     <!--{{-- {!! Form::hidden('user_id',$auth_id) !!} --}}-->
 
                         <div class="form-group">
                             {!! Form::label('title',
-                                            'Titre du conseil')
+                                            'Titre de l\'offre')
                             !!}
 
                             {!! Form::text('title',
                                             null,
                                             ['class' => 'form-control',
                                             'maxlength' => '100',
-                                            'placeholder' => 'Entrez ici le titre de votre conseil (255 caractères maximun)',
+                                            'placeholder' => 'Entrez ici le titre de votre offre (255 caractères maximun)',
                                             'required']
                             )!!}
                         </div>
                         <div class="form-group">
                             {!! Form::label('content',
-                                            'Contenu du conseil')
+                                            'Contenu de l\'offre')
                             !!}
 
                             {!! Form::textarea('content',
                                                 null,
                                                 ['class' => 'form-control',
                                                 'id' => 'ck-editor',
-                                                'placeholder' => 'Entrez le contenu du conseil ici...',
+                                                'placeholder' => 'Entrez le contenu de l\'offre ici...',
                                                 'size' => '30x20',
                                                 'required']
                             )!!}

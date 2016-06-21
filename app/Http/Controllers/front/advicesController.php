@@ -8,12 +8,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
+use App\Post;
 
 class AdvicesController extends Controller
 {
     public function index()
     {
-        return view('front\advices');
+        $posts = Post::where('category_id', '1')->published()->get();
+        return view('front.advices', compact('posts'));
     }
 
 

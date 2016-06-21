@@ -14,7 +14,7 @@ class AdvicesController extends Controller
 {
     public function index()
     {
-        $posts = Post::paginate(10);
+        $posts = Post::where('category_id', '1')->paginate(10);
         return view('back.advices.index', compact('posts'));
     }
 
@@ -39,7 +39,7 @@ class AdvicesController extends Controller
         else {
             $post = Post::create($request->all());
             $post->save();
-            return redirect(route('admin.conseils.index'))->with('message', 'Félicitations ! Votre article a bien été créé :)');
+            return redirect(route('admin.conseils.index'))->with('message', 'Félicitations ! Votre conseil a bien été créé :)');
         }
     }
 
@@ -59,10 +59,10 @@ class AdvicesController extends Controller
         {
             $post->published = $request->get('publication');
             if ($post->published === "1") {
-                $message = "Votre article est désormais en ligne.";
+                $message = "Votre conseil est désormais en ligne.";
             }
             else {
-                $message = "Votre article est désormais hors ligne.";
+                $message = "Votre conseil est désormais hors ligne.";
             }
             $post->update($request->all());
             return redirect(route('admin.conseils.index'))->with('message', $message);
@@ -70,7 +70,7 @@ class AdvicesController extends Controller
         else
         {
             $post->update($request->all());
-            return redirect(route('admin.conseils.index'))->with('message', 'Félicitations ! Votre article vient d\'être édité :)');
+            return redirect(route('admin.conseils.index'))->with('message', 'Félicitations ! Votre conseil vient d\'être édité :)');
         }
     }
 
@@ -80,6 +80,6 @@ class AdvicesController extends Controller
         $post = Post::find($id);
         $post->delete();
 
-        return redirect(route('admin.conseils.index'))->with('message', 'L\'article "' . $post->title . '" a bien été supprimé.');
+        return redirect(route('admin.conseils.index'))->with('message', 'Le conseil "' . $post->title . '" a bien été supprimé.');
     }
 }

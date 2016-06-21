@@ -1,0 +1,46 @@
+.mdp-bo-offers-last {
+  border-top:1px solid #ddd;
+  margin-top:20px;
+
+  header, footer {
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:space-between;
+
+    .mdp-bo-offers-buttons {
+      display:flex;
+      justify-content:space-around;
+      flex-flow:row wrap;
+      height:44px;
+      padding-top:10px;
+
+      a {
+        height:35px;
+      }
+
+      form {
+        margin-left:5px;
+      }
+    }
+
+    h3 {
+      font-size:150% !important;
+      color:$mediumGreen !important;
+      font-family:$fontTitle !important;
+    }
+
+    p {
+      font-style:italic;
+      font-weight:bold;
+      padding:0;
+      margin:0;
+    }
+  }
+
+  footer {
+    margin-top:20px;
+    border-top:1px solid #ddd;
+    padding-top:10px;
+  }
+
+}

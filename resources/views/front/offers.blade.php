@@ -4,19 +4,23 @@
     <section class="mdp-offers">
         <header><h1>Offres spéciales et bons cadeaux</h1></header>
         <main>
-            <section class="mdp-offers-special-offers">
+            <section class="mdp-offers-special-offers" id="offres">
                 <header>
                     <h2>Offres promotionnelles</h2>
                 </header>
                 <main>
                     <p>Régulièrement, (Ma Douce Parenthèse) ® vous propose ses offres spéciales ; ma façon de vous remercier de votre confiance et de votre fidélité :</p>
-                    <p><span class="mdp-h3">Jusqu’au 14/05/2016 :</span></p>
-                    <p>
-                        offres en cours.
-                    </p>
+                    @if(count($posts) > 0)
+                        @foreach ($posts as $post)
+                        <h3 class="mdp-h3">{{ $post->title }}</h3>
+                        {!! $post->content !!}
+                        @endforeach
+                    @else
+                    <p>Aucune d'offre promotionnelle en cours.</p>
+                    @endif
                 </main>
             </section>
-            <section class="mdp-offers-advantages">
+            <section class="mdp-offers-advantages" id="avantages">
                 <header>
                     <h2>Avantages</h2>
                 </header>
@@ -33,7 +37,7 @@
                     </div>
                 </main>
             </section>
-            <section class="mdp-offers-gifts">
+            <section class="mdp-offers-gifts" id="cadeaux">
                 <header>
                     <h2>Bons cadeaux</h2>
                 </header>
