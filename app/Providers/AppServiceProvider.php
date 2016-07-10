@@ -16,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
     {
         view()->composer('front.components.sidebar.news', function ($view) {
             // Get the $news
-            $news = Post::published()->where('category_id', '3')->orderBy('created_at', 'desc')->take(5)->get() ;
+            $news = Post::published()->where('category_id', '3')->take(5)->orderBy('created_at', 'desc')->get() ;
             $view->with('news', $news);
         });
     }

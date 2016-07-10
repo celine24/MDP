@@ -23,7 +23,7 @@
                             </div>
                         @endif
 
-                        {!! Form::model($post, ['route' => ['admin.actu.update', $post->id], 'method' => 'patch', 'id' =>
+                        {!! Form::model($actu, ['route' => ['admin.actu.update', $actu->id], 'method' => 'patch', 'id' =>
                         'form-main', 'class' => 'center-block']) !!}
 
                         {!! Form::hidden('category_id',3) !!}
@@ -41,6 +41,7 @@
                                             'required']
                             )!!}
                         </div>
+
                         <div class="form-group">
                             {!! Form::label('link',
                                             'Article de référence')
@@ -48,7 +49,11 @@
                             <select name="link" class="form-control">
                                 <option value="">Aucun</option>
                                 @foreach($posts as $post)
-                                    <option value="{{$post->link}}">{{$post->category->name . ' : ' . $post->title }}</option>
+                                    @if ($post->link == $actu->link)
+                                    <option selected value="{{$post->link}}">{{$post->category->name . ' : ' . $post->title }}</option>
+                                    @else
+                                    <option value="{{$post->link}}" >{{$post->category->name . ' : ' . $post->title }}</option>
+                                    @endif
                                 @endforeach
                             </select>
                         </div>

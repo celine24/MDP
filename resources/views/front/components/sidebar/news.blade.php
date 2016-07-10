@@ -8,9 +8,10 @@
         <ul>
             @foreach ($news as $new)
             <li>
-                <span class="mdp-bold">{{ $new->title }} :</span> {{ $new->content }}
+                <span class="mdp-bold">• {{ $new->created_at->format('d/m/Y') }} - </span>
+                {{ $new->content }}
                 @if ($new->displayed_link === 1)
-                    - <a href="{{ $new->link }}" target="_blank">en savoir plus</a>
+                    - <a href="{{ $new->link }}" class="mdp-bold" target="_blank">en savoir plus</a>
                 @endif
             </li>
             @endforeach

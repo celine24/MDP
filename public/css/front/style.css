@@ -315,9 +315,18 @@ ul li {
 }
 
 .mdp-sidebar-news main ul {
-  list-style: square !important;
-  padding-left: 15px;
+  list-style: none !important;
+  padding-left: 10px;
   margin: 0;
+}
+
+.mdp-sidebar-news main ul li {
+  text-align: justify;
+}
+
+.mdp-sidebar-news main ul li .mdp-bold {
+  font-weight: bold;
+  color: #7c9a3a;
 }
 
 .mdp-sidebar-info main p {

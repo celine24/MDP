@@ -55,9 +55,9 @@ class ActuController extends Controller
 
     public function edit($id)
     {
-        $post = Post::find($id);
-        $posts = Post::published()->orderBy('created_at')->get();
-        return view('back.actu.edit', compact('post', 'posts'));
+        $actu = Post::find($id);
+        $posts = Post::published()->where('category_id', '!=', '3')->orderBy('created_at')->get();
+        return view('back.actu.edit', compact('actu', 'posts'));
     }
 
 
