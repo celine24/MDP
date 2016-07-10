@@ -1,13 +1,15 @@
 @extends('back.app')
 
 @section('content')
+
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h1>Éditer l'Offre</h1>
-                    </div>
+                    <div class="panel-heading"><h1>Éditer l'offre</h1></div>
+
+
+
                     <div class="panel-body">
 
                         @if (count($errors) > 0)
@@ -24,7 +26,8 @@
                         {!! Form::model($post, ['route' => ['admin.offres.update', $post->id], 'method' => 'patch', 'id' =>
                         'form-main', 'class' => 'center-block']) !!}
 
-                    <!--{{-- {!! Form::hidden('user_id',$auth_id) !!} --}}-->
+                        {!! Form::hidden('category_id',2) !!}
+                        {!! Form::hidden('link','/offres#') !!}
 
                         <div class="form-group">
                             {!! Form::label('title',
@@ -34,7 +37,7 @@
                             {!! Form::text('title',
                                             null,
                                             ['class' => 'form-control',
-                                            'maxlength' => '100',
+                                            'maxlength' => '255',
                                             'placeholder' => 'Entrez ici le titre de votre offre (255 caractères maximun)',
                                             'required']
                             )!!}
@@ -58,17 +61,13 @@
 
                             <div class="form-group">
                                 <div class="checkbox checkbox-success pull-right">
-                                    @if ($post->published === 1)
-                                        {!! Form::checkbox('published', 0, false, ["id" => "checkbox", "class" => "checkbox checkbox-success"]) !!}
-                                        {!! Form::label('checkbox','Dépublier ?') !!}
-                                    @else
-                                        {!! Form::checkbox('published', 1, false, ["id" => "checkbox", "class" => "checkbox checkbox-success"]) !!}
-                                        {!! Form::label('checkbox','Mettre en ligne ?') !!}
-                                    @endif
+                                    {!! Form::checkbox('published', '1', Input::old('published'), ['id' => 'checkbox1', 'class' => 'checkbox checkbox-success']) !!}
+
+                                    {!! Form::label('checkbox1','Mettre en ligne ?') !!}
                                 </div>
-                                <div class="clearfix"></div>
                             </div>
                         </div>
+                        <div class="clearfix"></div>
                         {!! Form::submit('Envoyer',
                                         ['required',
                                         'name' => 'envoyer',
@@ -78,8 +77,12 @@
                         {!! Form::close() !!}
                         <div class="clearfix"></div>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
 @endsection
+
+
+

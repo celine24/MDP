@@ -12,11 +12,13 @@
                     <p>Régulièrement, (Ma Douce Parenthèse) ® vous propose ses offres spéciales ; ma façon de vous remercier de votre confiance et de votre fidélité :</p>
                     @if(count($posts) > 0)
                         @foreach ($posts as $post)
-                        <h3 class="mdp-h3">{{ $post->title }}</h3>
-                        {!! $post->content !!}
+                        <div id="{{ $post->id }}">
+                            <h3 class="mdp-h3">{{ $post->title }}</h3>
+                            {!! $post->content !!}
+                        </div>
                         @endforeach
                     @else
-                    <p>Aucune d'offre promotionnelle en cours.</p>
+                    <p>Aucune offre promotionnelle en cours.</p>
                     @endif
                 </main>
             </section>

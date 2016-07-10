@@ -15,6 +15,7 @@
                             </p>
                         @endif
                         <p class="lead">Ici vous pouvez consulter la liste de vos conseils, gérer ces derniers et en créer de nouveaux.</p>
+                        @if(count($posts) > 0)
                         <table class="table table-striped table-bordered table-condensed">
                             <tr>
                                 <th>Titre</th>
@@ -39,9 +40,9 @@
                                 <td class="col-md-1">{{ $post->updated_at->format('d/m/Y') }}</td>
                                 <td class="col-md-3">
                                     <div class="mdp-bo-advices-buttons">
-                                        <a href="{{ route('admin.conseils.edit', $post->id) }}" data-toggle="tooltip" title="Editer l'article" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span></a>
+                                        <a href="{{ route('admin.conseils.edit', $post->id) }}" title="Editer l'article" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span></a>
 
-                                        <a href="{{ url('conseils') }}" data-toggle="tooltip" title="Prévisualiser l'article" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></a>
+                                        <a href="{{ route('admin.conseils.show', $post->id) }}" title="Prévisualiser l'article" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></a>
 
                                         {!! Form::open([
                                             'url' => route('admin.conseils.update', $post->id),
@@ -104,6 +105,9 @@
                             </tr>
                             @endforeach
                         </table>
+                        @else
+                        <p>Aucun conseil pour l'instant.</p>
+                        @endif
                         <a class="btn btn-default pull-right" href="{{ route('admin.conseils.create') }}" role="button">Ecrire un nouveau conseil</a>
                             <div class="clearfix"></div>
                         <nav class="mdp-bo-advices-pagination">

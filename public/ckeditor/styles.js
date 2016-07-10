@@ -57,7 +57,7 @@ CKEDITOR.stylesSet.add( 'default', [
 	{ name: 'Superscript',		element: 'sup' },
 	*/
 
-	{ name: 'Marker',			element: 'span', attributes: { 'class': 'marker' } },
+	{ name: 'Green Bold', element: 'span', styles: { 'color' : '#7c9a3a' } },
 
 	{ name: 'Big',				element: 'big' },
 	{ name: 'Small',			element: 'small' },
@@ -108,4 +108,3 @@ CKEDITOR.stylesSet.add( 'default', [
 	{ name: 'Borderless Table',		element: 'table',	styles: { 'border-style': 'hidden', 'background-color': '#E6E6FA' } },
 	{ name: 'Square Bulleted List',	element: 'ul',		styles: { 'list-style-type': 'square' } }
 ] );
-

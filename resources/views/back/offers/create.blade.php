@@ -25,8 +25,8 @@
 
                                 {!! Form::open(['route' => ['admin.offres.store'], 'id' => 'form-main', 'class' => 'center-block']) !!}
 
-                                <!--{{-- {!! Form::hidden('user_id',$auth_id) !!} --}}-->
                                 {!! Form::hidden('category_id',2) !!}
+                                {!! Form::hidden('link','/offres#') !!}
 
                                 <div class="form-group">
                                     {!! Form::label('title',

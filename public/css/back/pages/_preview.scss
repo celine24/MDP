@@ -1,0 +1,41 @@
+
+.mdp-bo-article {
+  header {
+    h2 {
+      text-align:center;
+      margin:40px 0 30px 0;
+      font-size:170% !important;
+      font-family:$fontTitle;
+      color:$darkGreen;
+    }
+    .mdp-h3 {
+      font-size: 150%;
+      color: #7c9a3a;
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: normal !important;
+    }
+  }
+
+  a {
+    text-decoration:none !important;
+    color:$darkGreen;
+  }
+
+  .mdp-bold {
+    font-weight:bold;
+  }
+
+  .mdp-italic {
+    font-style:italic;
+  }
+}
+
+.mdp-article-date {
+  text-align:right !important;
+  font-style:italic;
+}
+
+.mdp-bo-return {
+  padding:20px 0;
+}
+

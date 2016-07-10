@@ -27,6 +27,7 @@
 
                                 <!--{{-- {!! Form::hidden('user_id',$auth_id) !!} --}}-->
                                 {!! Form::hidden('category_id',1) !!}
+                                {!! Form::hidden('link','/conseils#') !!}
 
                                 <div class="form-group">
                                     {!! Form::label('title',

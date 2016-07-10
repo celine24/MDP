@@ -1,13 +1,20 @@
+@if ((count($news) > 0))
+<!-- pour voir commenter afficher les données d'un include (sidebar par exemple), AppServiceProvider, fonction boot())-->
 <section class="mdp-sidebar-news">
     <header>
-        <h1>Actualité</h1>
+        <h1>Actualités</h1>
     </header>
     <main>
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            @foreach ($news as $new)
+            <li>
+                <span class="mdp-bold">{{ $new->title }} :</span> {{ $new->content }}
+                @if ($new->displayed_link === 1)
+                    - <a href="{{ $new->link }}" target="_blank">en savoir plus</a>
+                @endif
+            </li>
+            @endforeach
         </ul>
     </main>
 </section>
+@endif

@@ -30,16 +30,15 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="/admin">Panneau d'administration</a>
+				<a class="navbar-brand" href="/admin">MDP Panneau d'administration</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="navbar">
 				<ul class="nav navbar-nav">
-					<li><a href="{{ url('/admin') }}">Accueil</a></li>
-					<li><a href="{{ url('/admin/actu') }}">Actualités</a></li>
-					<li><a href="{{ url('/admin/tarifs') }}">Tarifs</a></li>
-					<li><a href="{{ url('/admin/offres') }}">Promotions</a></li>
-					<li><a href="{{ url('/admin/conseils') }}">Conseils</a></li>
+					<li class="{{ Request::is('admin') ? 'active' : '' }}"><a href="{{ url('/admin') }}">Accueil</a></li>
+					<li class="{{ Request::is('admin/actu') ? 'active' : '' }}"><a href="{{ url('/admin/actu') }}">Actualités</a></li>
+					<li class="{{ Request::is('admin/offres') ? 'active' : '' }}"><a href="{{ url('/admin/offres') }}">Promotions</a></li>
+					<li class="{{ Request::is('admin/conseils') ? 'active' : '' }}"><a href="{{ url('/admin/conseils') }}">Conseils</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -71,6 +70,8 @@
 	<!-- Scripts -->
 	<script src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('bower_components/bootstrap/dist/js/bootstrap.min.js') }}" type="text/javascript"></script>
+	<script src="{{ asset('js/jquery.confirm.js') }}" type="text/javascript"></script>
+	<script src="{{ asset('js/tooltip.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('ckeditor/ckeditor.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('js/ckeditor.js') }}" type="text/javascript"></script>
 </body>

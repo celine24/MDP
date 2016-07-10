@@ -16,8 +16,10 @@ class CreatePostsTable extends Migration
 
             $table->increments('id');
             $table->integer('category_id', false, true); //false = autoincrement ; true = unsigned
-            $table->string('title', 100);
+            $table->string('title', 255);
             $table->longText('content');
+            $table->string('link', 255);
+            $table->boolean('displayed_link');
             $table->boolean('published');
             $table->dateTime('created_at');
             $table->dateTime('updated_at');

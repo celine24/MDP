@@ -17,10 +17,6 @@ class CreateCategoriesTable extends Migration
             $table->increments('id');
             $table->string('name', 100);
         });
-
-        Category::create(['name' => 'Conseil']);
-        Category::create(['name' => 'Promo']);
-        Category::create(['name' => 'Actu']);
     }
 
     /**

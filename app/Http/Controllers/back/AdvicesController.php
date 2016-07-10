@@ -14,7 +14,7 @@ class AdvicesController extends Controller
 {
     public function index()
     {
-        $posts = Post::where('category_id', '1')->paginate(10);
+        $posts = Post::where('category_id', '1')->orderBy('created_at', 'desc')->paginate(10);
         return view('back.advices.index', compact('posts'));
     }
 
@@ -39,6 +39,9 @@ class AdvicesController extends Controller
         else {
             $post = Post::create($request->all());
             $post->save();
+            $post = Post::find($post->id);
+            $post->link = $post->link . $post->id;
+            $post->save();
             return redirect(route('admin.conseils.index'))->with('message', 'Félicitations ! Votre conseil a bien été créé :)');
         }
     }
@@ -49,7 +52,6 @@ class AdvicesController extends Controller
         $post = Post::find($id);
         return view('back.advices.edit', compact('post'));
     }
-
 
     public function update($id, Request $request)
     {
@@ -69,11 +71,20 @@ class AdvicesController extends Controller
         }
         else
         {
+            if($request->get('published') !== '1')
+            {
+                $post->published = '0';
+            }
             $post->update($request->all());
             return redirect(route('admin.conseils.index'))->with('message', 'Félicitations ! Votre conseil vient d\'être édité :)');
         }
     }
 
+    public function show($id)
+    {
+        $post = Post::find($id);
+        return view('back.advices.show', compact('post'));
+    }
 
     public function destroy($id)
     {

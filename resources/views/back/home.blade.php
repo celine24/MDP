@@ -11,7 +11,6 @@
 					<p>Bienvenue sur le panneau d'administration de Ma Douce Parenthèse ! Vous pouvez gérer vous-même votre contenu en vous référant à la liste suivante :</p>
 					<ul>
 						<li>Gérez vos <a href="{{ url('/admin/actu') }}">actualités</a></li>
-						<li>Gérez vos <a href="{{ url('/admin/tarifs') }}">tarifs</a></li>
 						<li>Gérez vos <a href="{{ url('/admin/offres') }}">offres promotionnelles</a></li>
 						<li>Gérez vos <a href="{{ url('/admin/conseils') }}">conseils</a></li>
 					</ul>

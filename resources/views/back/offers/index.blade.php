@@ -15,6 +15,7 @@
                             </p>
                         @endif
                         <p class="lead">Ici vous pouvez consulter la liste de vos offres, gérer ces dernièress et en créer de nouvelles.</p>
+                        @if(count($posts) > 0)
                         <table class="table table-striped table-bordered table-condensed">
                             <tr>
                                 <th>Titre</th>
@@ -39,9 +40,9 @@
                                     <td class="col-md-1">{{ $post->updated_at->format('d/m/Y') }}</td>
                                     <td class="col-md-3">
                                         <div class="mdp-bo-advices-buttons">
-                                            <a href="{{ route('admin.offres.edit', $post->id) }}" data-toggle="tooltip" title="Editer l'article" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span></a>
+                                            <a href="{{ route('admin.offres.edit', $post->id) }}" title="Editer l'article" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span></a>
 
-                                            <a href="{{ url('offres') }}" data-toggle="tooltip" title="Prévisualiser l'article" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></a>
+                                            <a href="{{ route('admin.offres.show', $post->id) }}" title="Prévisualiser l'article" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></a>
 
                                             {!! Form::open([
                                                 'url' => route('admin.offres.update', $post->id),
@@ -98,12 +99,14 @@
                                             </button>
                                             {!! Form::close() !!}
                                         </div>
-
                                         <div class="clearfix"></div>
                                     </td>
                                 </tr>
                             @endforeach
                         </table>
+                        @else
+                        <p>Aucune offre pour l'instant.</p>
+                        @endif
                         <a class="btn btn-default pull-right" href="{{ route('admin.offres.create') }}" role="button">Créer une offre</a>
                         <div class="clearfix"></div>
                     </div>

@@ -24,10 +24,7 @@ Route::resource('partenaires', 'front\partnersController');
 Route::resource('mentions-legales', 'front\legalNoticeController');
 Route::resource('remerciements', 'front\thanksController');
 
-//Route::get('/', function()
-//{
-//    return View::make('front.template');
-//});
+
 
 
 /*ROUTES BACK*/
@@ -39,7 +36,6 @@ Route::group(['prefix' => 'admin'], function() {
             /*pour l'authentification, tout se passe dans le dossier vendor/bestmomo */
             Route::get('/', ['as' => 'admin.home', 'uses' => '\Bestmomo\Scafold\Http\Controllers\HomeController@index']);
             Route::resource('actu', 'back\ActuController');
-            Route::resource('tarifs', 'back\PricesController');
             Route::resource('offres', 'back\OffersController');
             Route::resource('conseils', 'back\AdvicesController');
 

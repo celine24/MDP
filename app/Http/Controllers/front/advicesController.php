@@ -14,7 +14,7 @@ class AdvicesController extends Controller
 {
     public function index()
     {
-        $posts = Post::where('category_id', '1')->published()->get();
+        $posts = Post::where('category_id', '1')->published()->orderBy('created_at', 'desc')->get();
         return view('front.advices', compact('posts'));
     }
 

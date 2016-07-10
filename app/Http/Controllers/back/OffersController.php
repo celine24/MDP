@@ -14,7 +14,7 @@ class OffersController extends Controller
 {
     public function index()
     {
-        $posts = Post::where('category_id', '2')->get();
+        $posts = Post::where('category_id', '2')->orderBy('created_at', 'desc')->get();
         return view('back.offers.index', compact('posts'));
 
     }
@@ -70,9 +70,19 @@ class OffersController extends Controller
         }
         else
         {
+            if($request->get('published') !== '1')
+            {
+                $post->published = '0';
+            }
             $post->update($request->all());
             return redirect(route('admin.offres.index'))->with('message', 'Félicitations ! Votre offre vient d\'être éditée :)');
         }
+    }
+
+    public function show($id)
+    {
+        $post = Post::find($id);
+        return view('back.offers.show', compact('post'));
     }
 
     public function destroy($id)
