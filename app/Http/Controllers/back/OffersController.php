@@ -19,8 +19,7 @@ class OffersController extends Controller
 
     }
 
-
-    public function create(Request $request)
+    public function create()
     {
         return view('back.offers.create');
     }
@@ -43,14 +42,12 @@ class OffersController extends Controller
             return redirect(route('admin.offres.index'))->with('message', 'Félicitations ! Votre offre a bien été créée :)');
         }
     }
-
-
+    
     public function edit($id)
     {
         $post = Post::find($id);
         return view('back.offers.edit', compact('post'));
     }
-
 
     public function update($id, Request $request)
     {
@@ -87,6 +84,9 @@ class OffersController extends Controller
 
     public function destroy($id)
     {
+        $post = Post::find($id);
+        $post->delete();
 
+        return redirect(route('admin.offres.index'))->with('message', 'L\'offre "' . $post->title . '" a bien été supprimée.');
     }
 }

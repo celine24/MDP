@@ -765,18 +765,24 @@ p.mdp-sidebar-info-pdf a {
   color: #222;
 }
 
+.mdp-contact-form label {
+  display: none;
+}
+
 .mdp-contact-form input[type="text"], .mdp-contact-form input[type="email"] {
-  width: 29%;
+  width: 48%;
   padding: 10px;
+  margin: 10px 0;
   border-radius: 5px;
   border: 1px solid #7c9a3a;
   font-size: 90%;
+  box-sizing: border-box;
 }
 
 .mdp-contact-form textarea {
   font-size: 90%;
   padding: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
   width: 100%;
   border-radius: 5px;
   border: 1px solid #7c9a3a;
@@ -804,6 +810,11 @@ p.mdp-sidebar-info-pdf a {
   max-width: 500px;
   height: 300px;
   width: 100%;
+}
+
+.mdp-contact-success {
+  color: #7c9a3a;
+  font-size: 130% !important;
 }
 
 .mdp-legal-notice-list {

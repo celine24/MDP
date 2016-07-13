@@ -8,13 +8,33 @@
             <h2>Me joindre par téléphone</h2>
             <p><span class="mdp-contact-phone">02 - 43 - 44 - 96 - 24</span> ou <span class="mdp-contact-phone">06 - 37 - 32 - 97 - 57</span></p>
             <h2>Me joindre par mail</h2>
-            <form class="mdp-contact-form">
-                <input type="text" name="" placeholder="Votre Nom" />
-                <input type="text" name="" placeholder="Votre Prénom" />
-                <input type="email" name="" placeholder="Votre adresse mail" />
-                <textarea placeholder="Votre message"></textarea>
-                <input type="submit" value="Envoyer" />
-            </form>
+
+            @if(Session::has('message'))
+                <p class="mdp-contact-success">
+                    {{Session::get('message')}}
+                </p>
+            @endif
+
+            {!! Form::open(['route' => ['sendmail'], 'class' => 'mdp-contact-form']) !!}
+
+                {!! Form::label('lastname','Votre Nom') !!}
+                {!! Form::text('lastname', null, ['placeholder' => 'Votre Nom', 'required'] )!!}
+
+                {!! Form::label('firstname','Votre Prénom') !!}
+                {!! Form::text('firstname', null, ['placeholder' => 'Votre Prénom', 'required'] )!!}
+
+                {!! Form::label('email','Votre Nom') !!}
+                {!! Form::text('email', null, ['placeholder' => 'Votre adresse mail', 'required'] )!!}
+
+                {!! Form::label('object','Objet de votre message') !!}
+                {!! Form::text('object', null, ['placeholder' => 'Objet de votre message', 'required'] )!!}
+
+                {!! Form::label('message', 'Votre message') !!}
+                {!! Form::textarea('message', null, ['placeholder' => 'Votre message', 'required'] )!!}
+
+                {!! Form::submit('Envoyer', ['required', 'name' => 'submit'] )!!}
+
+            {!! Form::close() !!}
             <h2>Me situer</h2>
             <address>
                 Ma Douce Parenthèse<br>

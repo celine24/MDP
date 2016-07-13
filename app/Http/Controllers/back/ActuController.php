@@ -18,8 +18,7 @@ class ActuController extends Controller
         return view('back.actu.index', compact('posts'));
     }
 
-
-    public function create(Request $request)
+    public function create()
     {
         $posts = Post::published()->where('category_id', '!=', '3')->orderBy('created_at', 'desc')->get();
         return view('back.actu.create', compact('posts'));
@@ -52,14 +51,12 @@ class ActuController extends Controller
         }
     }
 
-
     public function edit($id)
     {
         $actu = Post::find($id);
         $posts = Post::published()->where('category_id', '!=', '3')->orderBy('created_at')->get();
         return view('back.actu.edit', compact('actu', 'posts'));
     }
-
 
     public function update($id, Request $request)
     {
@@ -102,7 +99,6 @@ class ActuController extends Controller
     {
         $post = Post::find($id);
         $post->delete();
-
         return redirect(route('admin.actu.index'))->with('message', 'L\'actualité a bien été supprimée.');
     }
 }

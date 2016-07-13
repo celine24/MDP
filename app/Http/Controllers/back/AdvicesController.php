@@ -18,8 +18,7 @@ class AdvicesController extends Controller
         return view('back.advices.index', compact('posts'));
     }
 
-
-    public function create(Request $request)
+    public function create()
     {
         return view('back.advices.create');
     }
@@ -45,8 +44,7 @@ class AdvicesController extends Controller
             return redirect(route('admin.conseils.index'))->with('message', 'Félicitations ! Votre conseil a bien été créé :)');
         }
     }
-
-
+    
     public function edit($id)
     {
         $post = Post::find($id);

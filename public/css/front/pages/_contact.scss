@@ -32,17 +32,24 @@
     color: #222;
   }
 
+  label {
+    display:none;
+  }
+
   input[type="text"], input[type="email"]{
-    width:29%;
+    width:48%;
     padding:10px;
+    margin:10px 0;
     border-radius:5px;
     border:1px solid $mediumGreen;
     font-size:90%;
+    box-sizing:border-box;
   }
+
   textarea {
     font-size:90%;
     padding:10px;
-    margin-top:20px;
+    margin-top:10px;
     width:100%;
     border-radius:5px;
     border:1px solid $mediumGreen;
@@ -72,4 +79,10 @@
     height:300px;
     width:100%;
   }
+}
+
+.mdp-contact-success {
+  color:$mediumGreen;
+  font-size:130% !important;
+
 }

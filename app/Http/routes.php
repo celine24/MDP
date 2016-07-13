@@ -20,6 +20,7 @@ Route::resource('produits', 'front\productsController');
 Route::resource('offres', 'front\offersController');
 Route::resource('conseils', 'front\advicesController');
 Route::resource('contact', 'front\contactController');
+Route::post('contact', ['as' => 'sendmail', 'uses' => 'front\contactController@sendMail']);
 Route::resource('partenaires', 'front\partnersController');
 Route::resource('mentions-legales', 'front\legalNoticeController');
 Route::resource('remerciements', 'front\thanksController');

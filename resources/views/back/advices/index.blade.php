@@ -20,7 +20,6 @@
                             <tr>
                                 <th>Titre</th>
                                 <th>Contenu</th>
-                                <th>Statut</th>
                                 <th>Création</th>
                                 <th>Édition</th>
                                 <th>Action</th>
@@ -28,17 +27,10 @@
                             @foreach ($posts as $post)
                             <tr>
                                 <td class="col-md-2">{{ str_limit($post->title, $limit = 60, $end = '...') }}</td>
-                                <td class="col-md-3">{!! str_limit($post->content, $limit = 60, $end = '...') !!} </td>
-                                <td class="col-md-1">
-                                    @if ($post->published === 1)
-                                        en ligne
-                                    @else
-                                        hors ligne
-                                    @endif
-                                </td>
+                                <td class="col-md-4">{!! str_limit($post->content, $limit = 60, $end = '...') !!} </td>
                                 <td class="col-md-1">{{ $post->created_at->format('d/m/Y') }}</td>
                                 <td class="col-md-1">{{ $post->updated_at->format('d/m/Y') }}</td>
-                                <td class="col-md-3">
+                                <td class="col-md-2">
                                     <div class="mdp-bo-advices-buttons">
                                         <a href="{{ route('admin.conseils.edit', $post->id) }}" title="Editer l'article" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span></a>
 
